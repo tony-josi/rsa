@@ -4,16 +4,18 @@
 
 constexpr uint32_t DEFAULT_32_BIT_PUBLIC_KEY = 0x10001;
 
-rsa::rsa(size_t bit_size) {
+rsa::rsa(size_t bit_size_arg) {
 
     int ret_val = 0;
-
-    if (bit_size < 32 || bit_size % 2 != 0) {
-        throw std::invalid_argument("Invalid bit size for RSA, must be greater than or equal to 32 and even");
+    bit_size = bit_size_arg;
+    
+    if (bit_size_arg < 64 || bit_size_arg % 2 != 0) {
+        throw std::invalid_argument("Invalid bit size for RSA, must be greater than or equal to 64 and even");
     }
-
-    ret_val += p.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size), 10, -1);
-    ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size), 10, -1);
+    bit_size_arg /= 2;
+    
+    ret_val += p.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
+    ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
     ret_val += p.big_int_multiply(q, pq);
 
     bi::big_int bi_1;
@@ -44,3 +46,6 @@ bi::big_int rsa::get_public_key() {
     return d;
 }
 
+bi::big_int rsa::get_modulus() {
+    return pq;
+}
