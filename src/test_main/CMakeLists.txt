@@ -10,3 +10,8 @@ if(MAIN_TEST_EXE)
         project_warnings 
         rsa_lib)
 endif()
+
+target_include_directories(
+    rsa_test_exe
+    PRIVATE ${RSA_INC_DIR} ${BI_LIB_INC_DIR}
+)

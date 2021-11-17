@@ -14,5 +14,5 @@ target_link_libraries(
 
 target_include_directories(
     rsa_lib
-    PRIVATE ${RSA_INC_DIR}
+    PRIVATE ${RSA_INC_DIR} ${BI_LIB_INC_DIR}
 )
