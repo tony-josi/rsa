@@ -10,4 +10,5 @@ endif()
 
 add_subdirectory(big_int)
 add_subdirectory(rsa)
+add_subdirectory(test_main)
 
