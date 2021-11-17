@@ -1,12 +1,29 @@
+#include <stdint.h>
+
+#include "big_int.hpp"
 
 class rsa {
 
 private:
-    size_t bit_size;
+    size_t          bit_size;
+    bi::big_int     p;
+    bi::big_int     q;
+    bi::big_int     p_minus_1;
+    bi::big_int     q_minus_1;
+    bi::big_int     pq;
+    bi::big_int     p_minus_1q_minus_1;
+    bi::big_int     e;
+    bi::big_int     d;
+
 public:
+
     rsa(size_t bit_size) { bit_size = bit_size; }
-    int rsa_generate_keys();
-    ~rsa();
+
+    int             rsa_encrypt(uint8_t *data, size_t data_len);
+    int             rsa_decrypt(uint8_t *data, size_t data_len);
+    bi::big_int     get_public_key(); 
+    bi::big_int     get_private_key(); 
+    bi::big_int     get_modulus();
 
 };
 
