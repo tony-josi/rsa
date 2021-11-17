@@ -17,7 +17,7 @@ private:
 
 public:
 
-    rsa(size_t bit_size) { bit_size = bit_size; }
+    rsa(size_t bit_size);
 
     int             rsa_encrypt(uint8_t *data, size_t data_len);
     int             rsa_decrypt(uint8_t *data, size_t data_len);
