@@ -35,3 +35,12 @@ rsa::rsa(size_t bit_size) {
     }
 
 }
+
+bi::big_int rsa::get_private_key() {
+    return e;
+}
+
+bi::big_int rsa::get_public_key() {
+    return d;
+}
+
