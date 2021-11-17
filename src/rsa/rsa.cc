@@ -49,3 +49,21 @@ bi::big_int rsa::get_public_key() {
 bi::big_int rsa::get_modulus() {
     return pq;
 }
+
+int rsa::rsa_encrypt(bi::big_int &plain, bi::big_int &cipher) {
+
+    if (plain.big_int_get_num_of_bits() > bit_size) {
+        throw std::invalid_argument("Plain text too long");
+    }
+
+    return plain.big_int_fast_modular_exponentiation(d, pq, cipher);
+}
+
+int rsa::rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher) {
+
+    if (cipher.big_int_get_num_of_bits() > bit_size) {
+        throw std::invalid_argument("Cipher text too long");
+    }
+
+    return cipher.big_int_fast_modular_exponentiation(e, pq, decipher);
+}

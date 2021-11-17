@@ -19,8 +19,8 @@ public:
 
     rsa(size_t bit_size);
 
-    int             rsa_encrypt(uint8_t *data, size_t data_len);
-    int             rsa_decrypt(uint8_t *data, size_t data_len);
+    int             rsa_encrypt(bi::big_int &plain, bi::big_int &cipher);
+    int             rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher);
     bi::big_int     get_public_key(); 
     bi::big_int     get_private_key(); 
     bi::big_int     get_modulus();
