@@ -4,7 +4,7 @@
 
 int main () {
 
-    rsa rsa_128(512);
+    rsa rsa_128(2048);
     bi::big_int pub_key = rsa_128.get_public_key();
     bi::big_int priv_key = rsa_128.get_private_key();
     bi::big_int modulus = rsa_128.get_modulus();
