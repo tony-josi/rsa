@@ -12,8 +12,8 @@ rsa::rsa(size_t bit_size) {
         throw std::invalid_argument("Invalid bit size for RSA, must be greater than or equal to 32 and even");
     }
 
-    ret_val += p.big_int_get_random_unsigned_prime_rabin_miller_threaded(bit_size, 10, -1);
-    ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(bit_size, 10, -1);
+    ret_val += p.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size), 10, -1);
+    ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size), 10, -1);
     ret_val += p.big_int_multiply(q, pq);
 
     bi::big_int bi_1;
