@@ -1,7 +1,7 @@
 
 
-set(BI_LIB_INC_DIR "${PROJECT_SOURCE_DIR}/src/inc")
-set(RSA_INC_DIR "${PROJECT_SOURCE_DIR}/internal_inc")
+set(BI_LIB_INC_DIR "${PROJECT_SOURCE_DIR}/src/internal_inc")
+set(RSA_INC_DIR "${PROJECT_SOURCE_DIR}/inc")
 
 
 if(MSVC)
