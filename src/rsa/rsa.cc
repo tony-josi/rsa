@@ -81,10 +81,28 @@ int rsa::rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher) {
     }
 
     int ret_val = 0;
-    bi::big_int cipher_reduced_p;
-    ret_val += cipher.big_int_modulus(p, cipher_reduced_p);
-    bi::big_int reduced_power;
-    ret_val += d.big_int_modulus(p_minus_1, reduced_power);
-    return ret_val + cipher_reduced_p.big_int_fast_modular_exponentiation(reduced_power, p, decipher);
+    // bi::big_int cipher_reduced_p;
+    // ret_val += cipher.big_int_modulus(p, cipher_reduced_p);
+    // bi::big_int reduced_power;
+    // ret_val += d.big_int_modulus(p_minus_1, reduced_power);
+    // return ret_val + cipher_reduced_p.big_int_fast_modular_exponentiation(reduced_power, p, decipher);
+
+    bi::big_int samller_prime, samller_prime_minus_1;
+    if (is_p_larger) {
+        samller_prime = q;
+        samller_prime_minus_1 = q_minus_1;
+    } else {
+        samller_prime = p;
+        samller_prime_minus_1 = p_minus_1;
+    }
+
+    bi::big_int reduced_cipher_text;
+    ret_val += cipher.big_int_modulus(samller_prime, reduced_cipher_text);
+
+    bi::big_int reduced_exponent;
+    ret_val += d.big_int_modulus(samller_prime_minus_1, reduced_exponent);
+
+    ret_val += reduced_cipher_text.big_int_fast_modular_exponentiation(reduced_exponent, samller_prime, decipher);
+    return ret_val;
 
 }
