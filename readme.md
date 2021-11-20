@@ -13,9 +13,10 @@
 
 [refer](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 
-RSA (Rivest–Shamir–Adleman) is a public-key cryptosystem that is widely used for secure data transmission. 
+[RSA (Rivest–Shamir–Adleman)](https://en.wikipedia.org/wiki/RSA_(cryptosystem)) is one of the commonly used  [asymmetric cryptography algorithm](https://en.wikipedia.org/wiki/Public-key_cryptography) . 
 
 ### Operation
+
 The RSA algorithm involves four steps: key generation, key distribution, encryption, and decryption.
 
 A basic principle behind RSA is the observation that it is practical to find three very large positive integers e, d, and n, such that with modular exponentiation for all integers m (with 0 ≤ m < n):
