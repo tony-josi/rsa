@@ -65,7 +65,7 @@ int rsa::rsa_encrypt(bi::big_int &plain, bi::big_int &cipher) {
     return plain.big_int_fast_modular_exponentiation(e, pq, cipher);
 }
 
-int rsa::rsa_decrypt_1(bi::big_int &cipher, bi::big_int &decipher) {
+int rsa::rsa_decrypt_textbook_method(bi::big_int &cipher, bi::big_int &decipher) {
 
     if (cipher.big_int_get_num_of_bits() > bit_size) {
         throw std::invalid_argument("Cipher text too long");
@@ -81,11 +81,6 @@ int rsa::rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher) {
     }
 
     int ret_val = 0;
-    // bi::big_int cipher_reduced_p;
-    // ret_val += cipher.big_int_modulus(p, cipher_reduced_p);
-    // bi::big_int reduced_power;
-    // ret_val += d.big_int_modulus(p_minus_1, reduced_power);
-    // return ret_val + cipher_reduced_p.big_int_fast_modular_exponentiation(reduced_power, p, decipher);
 
     bi::big_int samller_prime, samller_prime_minus_1;
     if (is_p_larger) {

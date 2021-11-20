@@ -21,7 +21,7 @@ public:
     rsa(size_t bit_size);
 
     int             rsa_encrypt(bi::big_int &plain, bi::big_int &cipher);
-    int             rsa_decrypt_1(bi::big_int &cipher, bi::big_int &decipher);
+    int             rsa_decrypt_textbook_method(bi::big_int &cipher, bi::big_int &decipher);
     int             rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher);
     bi::big_int     get_public_key(); 
     bi::big_int     get_private_key(); 
