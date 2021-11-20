@@ -14,6 +14,7 @@ private:
     bi::big_int     p_minus_1q_minus_1;
     bi::big_int     e;
     bi::big_int     d;
+    bool            is_p_larger;
 
 public:
 

@@ -14,8 +14,14 @@ rsa::rsa(size_t bit_size_arg) {
     }
     bit_size_arg /= 2;
     
-    ret_val += p.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
-    ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
+    int pq_comp_res;
+    do {
+        ret_val += p.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
+        ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
+    } while((pq_comp_res = p.big_int_unsigned_compare(q)) == 0); /* Continue until we have distinct primes p, q. */
+
+    is_p_larger = pq_comp_res > 0 ? true : false;
+
     ret_val += p.big_int_multiply(q, pq);
 
     bi::big_int bi_1;
