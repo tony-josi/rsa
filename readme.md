@@ -29,3 +29,5 @@ Before establishing the proof of correctness, there are two theorems that are es
 ### Fermat's little theorem
 
 Fermat's little theorem states that if p is a prime number, then for any integer a, the number ap − a is an integer multiple of p.
+
+![fermats](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_00.svg)
