@@ -75,3 +75,10 @@ Take mod pq,
 The same can be arrived from kp = x - y .
 
 ```
+
+### RSA Proof
+
+We need to prove that,
+
+![fermats](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_01.svg)
+
