@@ -56,5 +56,22 @@ x - y = kq
 
 q divides (x - y)
 
+=> kp = kq = x - y
+
+kq = x - y
+
+Muliply with p on both sides,
+
+kpq = (x - y)p
+
+Take mod pq,
+
+0 = (x - y)p mod pq
+
+=> 0 = (x - y) mod pq
+
+=> x = y mod pq
+
+The same can be arrived from kp = x - y .
 
 ```
