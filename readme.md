@@ -82,4 +82,4 @@ We need to prove that,
 
 ![fermats](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_01.svg)
 
-where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying, ed = 1 mod (lcm(p − 1, q − 1))
+where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying, `ed = 1 mod (lcm(p − 1, q − 1))`
