@@ -118,14 +118,14 @@ which is valid.
 
 Similarly equation (4) can be written as,
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_07.gif) --------------- (6), 
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_10.gif) --------------- (9), 
 
 which in turn can be written as 
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_08.gif) --------------- (7),
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_11.gif) --------------- (10),
 
 which can be further reduced using the Fermats Little theorem to,
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_09.gif) --------------- (8),
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_12.gif) --------------- (11),
 
-which is valid.
+which is also valid.
