@@ -99,4 +99,12 @@ The textbook RSA decryption algorithm is as follows:
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_13.gif) --------------- (12),
 where c is the cipher text, d is the private/decryption key, m is the original message. But as c, d, and pq will be very large the decryption process will take long time to execute.
 
-To optimize the calculation of equation 12, by using the CRT we can reduce it to, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_14.gif) --------------- (13) which can be further reduced to ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_15.gif) --------------- (14) by using the **Fermats Little theorem**
+To optimize the calculation of equation 12, by using the CRT we can reduce it to, 
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_14.gif) --------------- (13) 
+
+which can be further reduced to 
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_15.gif) --------------- (14) 
+
+by using the **Fermats Little theorem**.
