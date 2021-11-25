@@ -145,3 +145,15 @@ which can be further reduced to
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_15.gif) --------------- (14) 
 
 by using the **Fermats Little theorem**.
+
+## About the project
+
+The project make use of the [`big-int`](https://github.com/tony-josi/big_int) repository for the mathematical calculation involving big numbers used in the RSA algorithm. For the decryption stage both the textbook algorithm and the optimized algorithm are implemented.
+
+### Building the project
+
+```
+mkdir build && cd build
+cmake ..
+make
+```
