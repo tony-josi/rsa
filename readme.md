@@ -82,14 +82,16 @@ We need to prove that,
 
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_02.gif) --------------- (1)
 
-where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying, `ed = 1 mod (lcm(p − 1, q − 1))`.
+where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying,
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_05.gif) --------------- (2)
 
 According to the Chinese remainder theorem (CRT) equation 1 is valid if, 
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_03.gif) --------------- (2)
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_03.gif) --------------- (3)
 
 and
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_04.gif) --------------- (3)
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_04.gif) --------------- (4)
 
 are valid.
