@@ -80,15 +80,15 @@ The same can be arrived from kp = x - y .
 
 We need to prove that,
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_02.gif) --------------- (1)where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_05.gif) --------------- (2)
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_02.gif) --------------- (1) where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_05.gif) --------------- (2).
 
 According to the Chinese remainder theorem (CRT) equation (1) is valid if, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_03.gif) --------------- (3) and ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_04.gif) --------------- (4) are valid.
 
 From equation (2) ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_06.gif) --------------- (5) where m and n are some integers, because `ed - 1` is a multiple of the lcm of `(p-1, q-1)`, and lcm of `(p-1, q-1)` will be `m(p - 1) = n(q - 1)`.
 
-Equation (3) can be written as, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_07.gif) --------------- (6), which in turn can be written as ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_08.gif) --------------- (7), which can be further reduced using the Fermats Little theorem to, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_09.gif) --------------- (8), which is **valid**.
+Equation (3) can be written as, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_07.gif) --------------- (6), which in turn can be written as ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_08.gif) --------------- (7), which can be further reduced using the **Fermats Little theorem** to, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_09.gif) --------------- (8), which is **valid**.
 
-Similarly equation (4) can be written as, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_10.gif) --------------- (9), which in turn can be written as ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_11.gif) --------------- (10), which can be further reduced using the Fermats Little theorem to, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_12.gif) --------------- (11), which is also **valid**.
+Similarly equation (4) can be written as, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_10.gif) --------------- (9), which in turn can be written as ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_11.gif) --------------- (10), which can be further reduced using the **Fermats Little theorem** to, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_12.gif) --------------- (11), which is also **valid**.
 
 **Hence as both equation (3) and (4) are valid, according to CRT equation 1 is valid.**
 
