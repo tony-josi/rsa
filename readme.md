@@ -129,3 +129,12 @@ which can be further reduced using the Fermats Little theorem to,
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_12.gif) --------------- (11),
 
 which is also valid.
+
+**Hence as both equation (3) and (4) are valid, according to CRT equation 1 is valid.**
+
+## RSA optimizing the decryption algorithm
+
+The textbook RSA decryption algorithm is as follows:
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_13.gif) --------------- (12),
+where c is the cipher text, d is the private/decryption key, m is the original message. But as c, d, and pq will be very large the decryption process will take long time to execute.
