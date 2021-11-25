@@ -80,11 +80,7 @@ The same can be arrived from kp = x - y .
 
 We need to prove that,
 
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_02.gif) --------------- (1)
-
-where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying,
-
-![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_05.gif) --------------- (2)
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_02.gif) --------------- (1)where **m** can be any integer, **p and q** are distinct prime numbers and **e and d** are positive integers satisfying, ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_05.gif) --------------- (2)
 
 According to the Chinese remainder theorem (CRT) equation (1) is valid if, 
 
@@ -114,7 +110,7 @@ which can be further reduced using the Fermats Little theorem to,
 
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_09.gif) --------------- (8),
 
-which is valid.
+which is **valid**.
 
 Similarly equation (4) can be written as,
 
@@ -128,7 +124,7 @@ which can be further reduced using the Fermats Little theorem to,
 
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_12.gif) --------------- (11),
 
-which is also valid.
+which is also **valid**.
 
 **Hence as both equation (3) and (4) are valid, according to CRT equation 1 is valid.**
 
