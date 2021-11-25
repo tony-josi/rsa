@@ -101,3 +101,31 @@ From equation (2)
 ![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_06.gif) --------------- (5)
 
 where m and n are some integers, because `ed - 1` is a multiple of the lcm of `(p-1, q-1)`, and lcm of `(p-1, q-1)` will be `m(p - 1) = n(q - 1)`.
+
+Equation (3) can be written as,
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_07.gif) --------------- (6), 
+
+which in turn can be written as 
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_08.gif) --------------- (7),
+
+which can be further reduced using the Fermats Little theorem to,
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_09.gif) --------------- (8),
+
+which is valid.
+
+Similarly equation (4) can be written as,
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_07.gif) --------------- (6), 
+
+which in turn can be written as 
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_08.gif) --------------- (7),
+
+which can be further reduced using the Fermats Little theorem to,
+
+![rsa](https://github.com/tony-josi/rsa/blob/master/res/readme_images/rsa_09.gif) --------------- (8),
+
+which is valid.
