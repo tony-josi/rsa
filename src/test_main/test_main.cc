@@ -1,3 +1,14 @@
+/** 
+ *  @file   test_main.cc
+ *  @brief  Soruce file for testing the RSA library
+ *
+ *  This file contains the implementation test code of the RSA library
+ *
+ *  @author         Tony Josi   https://github.com/tony-josi/rsa
+ *  @copyright      Copyright (C) 2021 Tony Josi
+ *  @bug            No known bugs.
+ */
+
 #include <iostream>
 
 #include "rsa.hpp"

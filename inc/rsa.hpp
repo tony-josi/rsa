@@ -1,3 +1,16 @@
+/** 
+ *  @file   rsa.hpp
+ *  @brief  Header file for the RSA library
+ *
+ *  This file contains the header code and the DS used in the RSA library
+ *
+ *  @author         Tony Josi   https://github.com/tony-josi/rsa
+ *  @copyright      Copyright (C) 2021 Tony Josi
+ *  @bug            No known bugs.
+ */
+
+#pragma once
+
 #include <stdint.h>
 
 #include "big_int.hpp"

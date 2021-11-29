@@ -1,3 +1,14 @@
+/** 
+ *  @file   rsa.cc
+ *  @brief  Soruce file for the RSA library
+ *
+ *  This file contains the implementation of the RSA library
+ *
+ *  @author         Tony Josi   https://github.com/tony-josi/rsa
+ *  @copyright      Copyright (C) 2021 Tony Josi
+ *  @bug            No known bugs.
+ */
+
 #include <stdexcept>
 
 #include "rsa.hpp"
