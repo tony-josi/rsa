@@ -32,6 +32,13 @@ private:
 
 public:
 
+    /*  bit_size                                ==> RSA bitsize
+        miller_rabin_rounds                     ==> Maximum number of Rabin Miller iterations to be done 
+                                                    on the candidate random number to check its a prime    
+        max_number_of_threads_for_miller_rabin  ==> Maximum number of threads to use while finding random
+                                                    prime numbers. -1 means use maximum possible number of 
+                                                    threads [std::thread::hardware_concurrency()].
+    */
     rsa(size_t bit_size, int miller_rabin_rounds = 20, int max_number_of_threads_for_miller_rabin = -1);
 
     int             rsa_encrypt(bi::big_int &plain, bi::big_int &cipher);
