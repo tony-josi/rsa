@@ -15,7 +15,7 @@
 
 constexpr uint32_t DEFAULT_32_BIT_PUBLIC_KEY = 0x10001;
 
-rsa::rsa(size_t bit_size_arg, int miller_rabin_rounds = 20, int max_number_of_threads_for_miller_rabin = -1) {
+rsa::rsa(size_t bit_size_arg, int miller_rabin_rounds, int max_number_of_threads_for_miller_rabin) {
 
     int ret_val = 0;
     
