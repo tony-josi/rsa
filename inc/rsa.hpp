@@ -19,7 +19,7 @@ private:
 
 public:
 
-    rsa(size_t bit_size);
+    rsa(size_t bit_size, int miller_rabin_rounds = 20, int max_number_of_threads_for_miller_rabin = -1);
 
     int             rsa_encrypt(bi::big_int &plain, bi::big_int &cipher);
     int             rsa_decrypt_textbook_method(bi::big_int &cipher, bi::big_int &decipher);
