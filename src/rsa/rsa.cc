@@ -20,8 +20,6 @@ rsa::rsa(size_t bit_size_arg) {
         ret_val += q.big_int_get_random_unsigned_prime_rabin_miller_threaded(static_cast<int>(bit_size_arg), 10, -1);
     } while((pq_comp_res = p.big_int_unsigned_compare(q)) == 0); /* Continue until we have distinct primes p, q. */
 
-    is_p_larger = pq_comp_res > 0 ? true : false;
-
     ret_val += p.big_int_multiply(q, pq);
 
     bi::big_int bi_1;
@@ -37,6 +35,14 @@ rsa::rsa(size_t bit_size_arg) {
     }
 
     ret_val += e.big_int_modular_inverse_extended_euclidean_algorithm(p_minus_1q_minus_1, d);
+
+    if (pq_comp_res > 0) {
+        smaller_prime = q;
+        ret_val += d.big_int_modulus(q_minus_1, reduced_d);
+    } else {
+        smaller_prime = p;
+        ret_val += d.big_int_modulus(p_minus_1, reduced_d);
+    }
 
     if (ret_val != 0) {
         throw std::invalid_argument("Error initializing RSA");
@@ -81,23 +87,10 @@ int rsa::rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher) {
     }
 
     int ret_val = 0;
-
-    bi::big_int samller_prime, samller_prime_minus_1;
-    if (is_p_larger) {
-        samller_prime = q;
-        samller_prime_minus_1 = q_minus_1;
-    } else {
-        samller_prime = p;
-        samller_prime_minus_1 = p_minus_1;
-    }
-
     bi::big_int reduced_cipher_text;
-    ret_val += cipher.big_int_modulus(samller_prime, reduced_cipher_text);
+    ret_val += cipher.big_int_modulus(smaller_prime, reduced_cipher_text);
 
-    bi::big_int reduced_exponent;
-    ret_val += d.big_int_modulus(samller_prime_minus_1, reduced_exponent);
-
-    ret_val += reduced_cipher_text.big_int_fast_modular_exponentiation(reduced_exponent, samller_prime, decipher);
+    ret_val += reduced_cipher_text.big_int_fast_modular_exponentiation(reduced_d, smaller_prime, decipher);
     return ret_val;
 
 }
