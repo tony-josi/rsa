@@ -112,6 +112,9 @@ int rsa::rsa_decrypt(bi::big_int &cipher, bi::big_int &decipher) {
         throw std::invalid_argument("Cipher text too long");
     }
 
+    /* Refer ==> RSA optimizing the decryption algorithm
+       from https://tony-josi.github.io/Articles/RSA_Proof/rsa_proof.html */
+
     int ret_val = 0;
     bi::big_int reduced_cipher_text;
     ret_val += cipher.big_int_modulus(smaller_prime, reduced_cipher_text);
