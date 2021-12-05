@@ -44,6 +44,7 @@ Proof:
 ```
 
 x = y (mod p)
+
 x = y + kp
 x - y = kp
 
