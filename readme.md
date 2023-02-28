@@ -21,7 +21,7 @@ The RSA algorithm involves four steps: key generation, key distribution, encrypt
 
 ## RSA Proof of correctness
 
-Before establishing the proof of correctness, there are two theorems that are essential in undertstanding it:
+Before establishing the proof of correctness, there are two theorems that are essential in undertstanding RSA:
 
 1. Fermat's little theorem
 2. Chinese remainder theorem
